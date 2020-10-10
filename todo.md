@@ -18,7 +18,7 @@ html
 [] multiplication function
 [] division function
 [] clear input fields with C
-[] once calculation is complete send back ok
+[] once calculation is complete send back ok (send 200)
 [] GET request after POST to get actual calculation
 
 [] record of operations and solutions on the server
