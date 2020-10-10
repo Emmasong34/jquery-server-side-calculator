@@ -17,6 +17,10 @@ app.get('/calculationArray', (req, res) => {
     res.send(calculationsData);
 });
 
+function additionFunction(){
+//add numbers from DOM input
+}
+
 
 
 
