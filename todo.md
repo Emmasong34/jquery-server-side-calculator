@@ -5,13 +5,13 @@ Logic must be on server side!!
 ### Calculator
 
 html
-[] two input boxes for numbers
-[] + button
-[] - button
-[] * button
-[] / button
-[] = button (when clicked capture input, bundle in object, send to server via POST)
-[] C button
+[x] two input boxes for numbers
+[x] + button
+[x] - button
+[x] * button
+[x] / button
+[x] = button (when clicked capture input, bundle in object, send to server via POST)
+[x] C button
 
 [] addition function
 [] subtraction function

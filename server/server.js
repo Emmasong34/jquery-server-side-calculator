@@ -6,14 +6,16 @@ const bodyParser = require ('body-parser');
 const app = express();
 const port = 5000;
 
-const additionProblems = require ('./modules/additionProblems');
-const subtractionProblems = require ('./modules/subtractionProblems');
-const multiplicationProblems = require ('./modules/multiplicationProblems');
-const divisionProblems = require ('./modules/divisionProblems');
+const calculationsData = require ('./modules/calculationsData'); 
 
 app.use(express.static('server/public'));
-
 app.use(bodyParser.urlencoded({extended: true}));
+
+
+
+app.get('/calculationArray', (req, res) => {
+    res.send(calculationsData);
+});
 
 
 
