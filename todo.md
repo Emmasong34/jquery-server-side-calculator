@@ -13,15 +13,15 @@ html
 [x] = button (when clicked capture input, bundle in object, send to server via POST)
 [x] C button
 
-[] addition function
-[] subtraction function
-[] multiplication function
-[] division function
+[x] addition function
+[x] subtraction function
+[x] multiplication function
+[x] division function
 [x] clear input fields with C
 [x] once calculation is complete send back ok (send 200)
-[] GET request after POST to get actual calculation
+[x] GET request after POST to get actual calculation
 
-[] record of operations and solutions on the server
+[x] record of operations and solutions on the server
 [] display record of operations and solutions on page load with GET request 
     (will go away when server restarts)
 [] update list when calculation is made

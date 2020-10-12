@@ -41,7 +41,6 @@ function mathSolution(){
             secondInput : $('#secondInput').val()
         }
         console.log(mathObject);
-        //console.log('I have received', firstInput, operator, secondInput);
         //send data to server via post request
         $.ajax({
             method: 'POST',
@@ -53,13 +52,13 @@ function mathSolution(){
             }
         }).then(function(response){
             console.log('response', response);
-            //appendToDom();
+            appendToDom(response);
             mathFunction();
         }).catch(function(error){
             alert(error);
         });
     };
-    //mathSolution()    
+    
 
 function appendToDom(data){
     console.log('in appendToDom');
