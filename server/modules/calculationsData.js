@@ -1,8 +1,8 @@
 let calculationArray = [
     {
-        firstInput: '',
+        firstInput: Number(),
         operator: '',
-        secondInput: '',
+        secondInput: Number(),
 
         //number 1
         //operator
@@ -11,9 +11,7 @@ let calculationArray = [
     },
 ];
 
-module.exports = {
-    list: calculationArray
-}
+module.exports = calculationArray;
 
 //if + is pressed run addition when = is pressed
 //else if - is pressed run subtraction when = is pressed
