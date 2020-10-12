@@ -7,6 +7,7 @@ const app = express();
 const port = 5000;
 
 const calculationsData = require ('./modules/calculationsData'); 
+const calculationArray = require('./modules/calculationsData');
 
 //hook up static files
 app.use(express.static('server/public'));
@@ -14,37 +15,40 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-//app.get('/calculationArray', (req, res) => {
-    //let sum = (firstInput) + (secondInput) 
-    //res.send(calculationsData);
-//});
+app.get('/calculationArray', (req, res) => { 
+    res.send(calculationArray);
+});
 
 
 app.post('/calculationArray', (req, res) => {
     console.log(req.body);
-    //object.push(req.body);
+    let taco = mathFunction(req.body.firstInput, req.body.operator, req.body.secondInput);
+    console.log(taco)
+    //req.body is handling the data of math object
+    calculationArray.push(req.body);
     res.sendStatus(200);
+    
 });
 
-function mathFunction(){
+function mathFunction(firstInput, operator, secondInput){
     if (operator == '+'){
-        return sum = Number(firstInput) + Number(secondInput);
-    } console.log(sum);
+        return sum = Number(firstInput) + Number(secondInput),
+        console.log(sum) } 
 
-    else if 
-        (operator == '-'){
-        return difference = Number(firstInput) - Number(secondInput);
-    } console.log(difference);
+        else if
+            (operator == '-'){
+            return difference = Number(firstInput) - Number(secondInput),
+             console.log(difference)}
 
-    else if 
-        (operator == '*'){
-        return product = Number(firstInput) * Number(secondInput);
-    } console.log(product);
+            else if 
+                (operator == '*'){
+                return product = Number(firstInput) * Number(secondInput),
+                console.log(product);}
 
-    else if 
-        (operator == '/'){
-        return quotient = Number(firstInput) / Number(secondInput);
-    } console.log(quotient);
+                else if 
+                    (operator == '/'){
+                    return quotient = Number(firstInput) / Number(secondInput),
+                     console.log(quotient)}
 };
 
 app.listen(port, () => {
