@@ -24,6 +24,7 @@ let taco = 0;
 app.post('/calculationArray', (req, res) => {
     console.log(req.body);
     taco = mathFunction(req.body.firstInput, req.body.operator, req.body.secondInput);
+    //data from inputs and operator from the math object
     console.log('in post calculation array', taco)
     //req.body is handling the data of math object
     calculationArray.push(req.body);
@@ -34,29 +35,26 @@ app.post('/calculationArray', (req, res) => {
 
 function mathFunction(firstInput, operator, secondInput){
     if (operator == '+'){
-        return sum = Number(firstInput) + Number(secondInput);
-        // console.log('in math function sum =', sum) 
+        return sum = Number(firstInput) + Number(secondInput); 
     } 
 
         else if
             (operator == '-'){
             return difference = Number(firstInput) - Number(secondInput);
-            //  console.log(difference)
             }
 
             else if 
                 (operator == '*'){
                 return product = Number(firstInput) * Number(secondInput);
-                // console.log(product);
             }
 
                 else if 
                     (operator == '/'){
                     return quotient = Number(firstInput) / Number(secondInput);
-                     //console.log(quotient)
                     }
 }
 
+//keeps port open
 app.listen(port, () => {
     console.log('Up and running on port: ', port);
 });

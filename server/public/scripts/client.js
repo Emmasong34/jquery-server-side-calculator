@@ -1,4 +1,3 @@
-//const calculationArray = require("../../modules/calculationsData");
 
 console.log('hello from js')
 
@@ -18,7 +17,6 @@ function onReady(){
 function operatorFunction() {
     operator = event.target.innerHTML;
    //innerHTML property sets or returns the HTML content (inner HTML) of an element
-    console.log(operator);
    }
 
 function mathFunction(){
@@ -27,7 +25,6 @@ function mathFunction(){
         method: 'GET',
         url: '/calculationArray',
     }).then(function (response){
-        //console.log(response);
         appendToDom(response);
     }).catch(function(error){
         alert(error);
@@ -35,6 +32,7 @@ function mathFunction(){
 }
 
 function mathSolution(){
+    //gets input values from dom
         let mathObject = {
             firstInput : $('#firstInput').val(),
             operator : operator,
@@ -66,14 +64,13 @@ function appendToDom(data){
     $('#displayMath').empty();
     for(let i = 0; i < data.length; i++){
         $('#displayMath').append(`
-        <li>equation: ${data[i].firstInput} ${data[i].operator} ${data[i].secondInput} </li>
+        <li>equation: ${data[i].firstInput} ${data[i].operator} ${data[i].secondInput}</li>
         `);
     }
 }
 
-
 function clearInputs(){
-    //clear inputs
+    //clear inputs on dom when C button is pressed
     $('#firstInput').val(''),
     $('#secondInput').val('')
 };

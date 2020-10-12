@@ -24,6 +24,6 @@ html
 [x] record of operations and solutions on the server
 [] display record of operations and solutions on page load with GET request 
     (will go away when server restarts)
-[] update list when calculation is made
+[x] update list when calculation is made
 
 
